@@ -1,7 +1,7 @@
 <html>
 	<body>
 		<center>
-			<h2><u>FIRST SESSIONAL EXAMINATION</u></h2>
+			<h1><u>RESULT OF FIRST SESSIONAL EXAMINATION  S1-MCA 2023</u></h1>
 			<table border="0">
 				<form method ="post" action="result.php">
 				<tr>
@@ -10,10 +10,11 @@
 				</tr>
 				<tr>
 						<td>ROLL NO:</td>
-						<td><input type="text" name="roll"><td><br><br>
+						<td><input type="text" name="roll"></td><br><br>
+				</tr>
 				<tr>
-				<tr>
-						<td  align="center" colspan="2"><input type="submit" name ="sub" value="results"></td><br><br>
+						<td  align="center" colspan="2"><input type="submit" name ="sub" value="results"></td>
+				</tr><br><br>
 				  </form>
 				 </table>
 	</center>
