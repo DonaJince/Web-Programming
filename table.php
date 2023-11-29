@@ -1,5 +1,5 @@
 <?php
-	$con=new mysqli("localhost","root","");
+	$con=new mysqli("localhost","root","","MACE");
 	if($con->connect_error)
 		die("\nconnection failed:".$con->connect_error);
 $s="create table student(rollno int primary key ,name varchar(20),department varchar(20) )";
