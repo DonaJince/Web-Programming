@@ -1,9 +1,9 @@
 <?php
-	$con=new mysqli("localhost","root","");
+	$con=new mysqli("localhost","root","","MACE");
 	if($con->connect_error)
 		die("\nconnection failed:".$con->connect_error);
-$s="select * from student";
-if($con->query($s)===TRUE)
+$s="select  *from student";
+if($con->query($s)==TRUE)
 {
 	$result=$con->query($s);
 	if($result->num_rows>0)
@@ -18,13 +18,12 @@ if($con->query($s)===TRUE)
 		<?php
 		while($row=$result->fetch_assoc())
 		{
-			echo "<tr><th>".$row[0]."</th><th>".$row[1]."</th><th>".$row[2]."</th></tr>";
+			echo "<tr><th>".$row['rollno']."</th><th>".$row['name']."</th><th>".$row['department']."</th></tr>";
 		}
 	}
-	echo "</table>"
+	echo "</table>";
 }
 else
-	echo "\nfailed to display
-	 details:",$con->error;
+	echo "\nfailed to display details:",$con->error;
 $con->close();
 ?>
