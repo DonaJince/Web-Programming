@@ -21,7 +21,7 @@ if($con->query($s)==TRUE)
 		<?php
 		while($row=$result->fetch_assoc())
 		{
-			echo "<tr><th>".$row['pid']."</th><th>".$row['pname']."</th><th>".$row['quantity'].."</th><th>".$row['price']."</th><th>".$row['quantity']."</th><th>".$row['quantity']"</th></tr>";
+	echo "<tr><th>".$row['pid']."</th><th>".$row['pname']."</th><th>".$row['quantity']."</th><th>".$row['price']."</th><th>".$row['man_date']."</th><th>".$row['exp_date']."</th></tr>";
 		}
 	}
 	echo "</table>";
