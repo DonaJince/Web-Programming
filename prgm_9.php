@@ -17,11 +17,28 @@ if($con->query($s)==TRUE)
 		<th>UNIT PRICE</th>
 		<th>MANUFACTURED DATE</th>
 		<th>EXPIRY DATE</th>
+		<th>MANUFACTURER NAME</th>
 		</tr>
 		<?php
 		while($row=$result->fetch_assoc())
 		{
-	echo "<tr><th>".$row['pid']."</th><th>".$row['pname']."</th><th>".$row['quantity']."</th><th>".$row['price']."</th><th>".$row['man_date']."</th><th>".$row['exp_date']."</th></tr>";
+			if($row['man_name'])
+			{
+				echo "<tr><th>".$row['pid']."</th><th>".$row['pname']."</th><th>".$row['quantity']."</th><th>".$row['price']."</th><th>".$row['man_date']."</th><th>".$row['exp_date'].
+				"</th><th>".$row['man_name']."</th></tr>";
+			}
+			else
+			{
+				echo "<form  action='add.php' method='POST'>";
+				echo "<tr><th>".$row['pid']."</th><th>".$row['pname']."</th><th>".$row['quantity']."</th><th>".$row['price']."</th><th>".$row['man_date']."</th><th>".$row['exp_date'].
+				"</th><th>";
+				?>
+				<input type='submit' name='add' value='ADD'>
+				<input type="hidden" name="pid" value="<?php echo $row['pid']; ?>"/>
+				</form>
+				<?php
+				echo "</th></tr>";
+			}
 		}
 	}
 	echo "</table>";
