@@ -29,10 +29,11 @@ if($con->query($s)==TRUE)
 			}
 			else
 			{
-				echo "<form  action='add.php' method='POST'>";
+				echo "<form  action='next.php' method='POST'>";
 				echo "<tr><th>".$row['pid']."</th><th>".$row['pname']."</th><th>".$row['quantity']."</th><th>".$row['price']."</th><th>".$row['man_date']."</th><th>".$row['exp_date'].
 				"</th><th>";
 				?>
+			        <input type="text"  placeholder="enter the manufacturer name" name="mn">
 				<input type='submit' name='add' value='ADD'>
 				<input type="hidden" name="pid" value="<?php echo $row['pid']; ?>"/>
 				</form>

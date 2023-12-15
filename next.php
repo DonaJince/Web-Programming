@@ -1,5 +1,5 @@
 	<?php
-		if (isset($_POST['btn']))
+		if (isset($_POST['add']))
 		{
 				$n=$_POST['mn'];
 				$pid=$_POST['pid'];
